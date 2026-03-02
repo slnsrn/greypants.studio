@@ -1,36 +1,202 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Build this as a modern responsive landing page using Next.js and Tailwind CSS. Keep the code clean and production-ready. (with biome)
 
-## Getting Started
+Create a modern, minimal and dynamic landing page for a creative indie software studio called “GreyPants Studio”.
 
-First, run the development server:
+The brand should feel:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+clean
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+premium
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+minimal
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+slightly playful
 
-## Learn More
+European tech aesthetic
 
-To learn more about Next.js, take a look at the following resources:
+not corporate
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+not flashy startup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+no bright colors
 
-## Deploy on Vercel
+Visual direction:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Black & white base
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Soft grey tones
+
+Very subtle gradients
+
+Lots of whitespace
+
+Large bold typography
+
+Smooth fade-in animations
+
+Subtle motion on scroll
+
+Minimal micro-interactions
+
+Clean sans-serif font (like Inter or Suisse style)
+
+Layout structure:
+
+Hero Section
+
+Big bold headline:
+“We build simple tools that feel good.”
+
+Subtext:
+“Independent software studio crafting clean, useful digital products.”
+
+CTA buttons:
+[View Products]
+[Get in touch]
+
+Subtle animated background (very soft gradient or noise texture)
+
+About Section
+
+Short story about the origin of the name:
+“Three creatives. Grey pants. One idea.”
+
+Brief paragraph about building thoughtful apps.
+
+Products Section
+
+Minimal product cards (image mockup + short description)
+
+Hover animation
+
+Clean layout grid
+
+Placeholder for apps (FeedCam, future tools)
+
+Philosophy Section
+
+Short bold statements:
+
+Simplicity first.
+
+Useful over noisy.
+
+Small, focused, independent.
+
+Footer
+
+greypants.studio
+
+Contact email
+
+Minimal social icons
+
+Copyright GreyPants Studio
+
+Design Constraints:
+
+No stock photos
+
+No generic startup illustrations
+
+No colorful blobs
+
+No neon
+
+No heavy gradients
+
+No shadows everywhere
+
+Keep it calm and confident
+
+Tone:
+Confident but quiet.
+Minimal but not cold.
+Creative but not chaotic.
+
+Add subtle grain texture and a very light animated noise layer in the background to create depth without visual clutter.
+
+
+
+context direction🖤 GreyPants Studio – Landing Page Copy
+🟢 Hero
+
+Small software. No drama.
+
+We build simple mobile tools that do one thing well.
+
+Independent product studio creating thoughtful, focused apps.
+
+[View our work]
+[Say hello]
+
+🟢 About
+
+Three creatives. Grey pants. One idea.
+
+GreyPants Studio started with an inside joke and a shared love for building things.
+
+What began as “why are we all wearing grey pants?”
+turned into shipping real products.
+
+We’re an independent studio designing and developing small, intentional digital tools.
+
+🟢 What We Build
+
+What we build
+
+We create:
+
+• Mobile applications
+• Lightweight productivity tools
+• Small experimental side projects
+• Occasionally playful interactive ideas
+
+We care about:
+
+• Clean interfaces
+• Calm design
+• Focused features
+• Products that feel good to use
+
+No feature overload.
+No corporate noise.
+Just thoughtful software.
+
+🟢 Philosophy
+
+Our approach
+
+Start small.
+Ship early.
+Improve constantly.
+
+Useful over noisy.
+Clarity over complexity.
+Independence over scale-at-all-costs.
+
+We’re not trying to build everything.
+Just the right things.
+
+🟢 Products Section (Placeholder)
+
+Our work
+
+FeedCam
+A simple teleprompter experience built for clarity and flow.
+
+(More small tools coming soon.)
+
+🟢 Closing Line
+
+Built independently.
+Somewhere between serious and playful.
+
+🟢 Footer
+
+GreyPants Studio
+greypants.studio
+
+hello@greypants.studio
+
+© 2026 GreyPants Studio
