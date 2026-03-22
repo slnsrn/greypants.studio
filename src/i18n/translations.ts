@@ -403,6 +403,6 @@ export const translations = {
 			privacyPolicy: "Gizlilik Politikas\u0131",
 		},
 	},
-} as const;
+};
 
 export type Translations = (typeof translations)["en"];
