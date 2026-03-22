@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { LocaleProvider } from "@/i18n/LocaleContext";
 
 const inter = Inter({
 	variable: "--font-inter",
-	subsets: ["latin"],
+	subsets: ["latin", "latin-ext"],
 });
 
 export const metadata: Metadata = {
@@ -20,7 +21,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${inter.variable} antialiased`}>{children}</body>
+			<body className={`${inter.variable} antialiased`}>
+				<LocaleProvider>{children}</LocaleProvider>
+			</body>
 		</html>
 	);
 }

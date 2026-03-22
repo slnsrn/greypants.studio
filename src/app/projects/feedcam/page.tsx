@@ -3,9 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useReveal } from "@/hooks/useReveal";
+import { useLocale } from "@/i18n/LocaleContext";
 
 export default function FeedCamPage() {
 	useReveal();
+	const { locale, setLocale, t } = useLocale();
+	const s = t.feedcam;
 
 	return (
 		<div className="grain noise relative min-h-screen">
@@ -23,7 +26,7 @@ export default function FeedCamPage() {
 							href="#download"
 							className="inline-flex h-9 items-center rounded-full bg-foreground px-5 text-sm font-medium text-background transition-opacity hover:opacity-80"
 						>
-							Download
+							{s.download}
 						</a>
 					</div>
 				</div>
@@ -43,28 +46,26 @@ export default function FeedCamPage() {
 						/>
 					</div>
 					<h1 className="fade-in fade-in-delay-1 mb-4 text-5xl font-bold leading-tight tracking-tight md:text-7xl">
-						FeedCam
+						{s.heroTitle}
 					</h1>
 					<p className="fade-in fade-in-delay-2 mb-6 text-sm font-medium tracking-widest uppercase text-muted">
-						Teleprompter meets camera
+						{s.heroTagline}
 					</p>
 					<p className="fade-in fade-in-delay-3 mx-auto mb-12 max-w-lg text-lg leading-relaxed text-muted">
-						Read your script while recording. FeedCam overlays scrolling
-						teleprompter text on your front camera so you never lose your
-						train of thought.
+						{s.heroDesc}
 					</p>
 					<div className="fade-in fade-in-delay-4 flex flex-col items-center justify-center gap-4 sm:flex-row">
 						<a
 							href="#download"
 							className="inline-flex h-12 items-center rounded-full bg-foreground px-8 text-sm font-medium text-background transition-opacity hover:opacity-80"
 						>
-							Get the app
+							{s.getApp}
 						</a>
 						<a
 							href="#features"
 							className="inline-flex h-12 items-center rounded-full border border-border px-8 text-sm font-medium text-foreground transition-colors hover:border-foreground/30"
 						>
-							See features
+							{s.seeFeatures}
 						</a>
 					</div>
 				</div>
@@ -75,17 +76,17 @@ export default function FeedCamPage() {
 				<div className="mx-auto max-w-5xl">
 					<div className="reveal mb-16 text-center">
 						<p className="mb-4 text-sm font-medium tracking-widest uppercase text-muted">
-							See it in action
+							{s.screenshotsLabel}
 						</p>
 						<h2 className="text-3xl font-bold tracking-tight md:text-5xl">
-							Simple by design.
+							{s.screenshotsTitle}
 						</h2>
 					</div>
 					<div className="reveal flex flex-col items-center justify-center gap-8 md:flex-row">
 						<div className="w-56 overflow-hidden rounded-3xl shadow-2xl">
 							<Image
 								src="/Apple iPhone 14 Plus (1284x2778)/Apple iPhone 14 Plus Screenshot 2.png"
-								alt="FeedCam - Script library"
+								alt={s.screenshotAlt1}
 								width={1284}
 								height={2778}
 								className="w-full"
@@ -94,7 +95,7 @@ export default function FeedCamPage() {
 						<div className="-mt-4 w-64 overflow-hidden rounded-3xl shadow-2xl md:mt-0 md:-translate-y-6">
 							<Image
 								src="/Apple iPhone 14 Plus (1284x2778)/Apple iPhone 14 Plus Screenshot 1.png"
-								alt="FeedCam - Recording with teleprompter"
+								alt={s.screenshotAlt2}
 								width={1284}
 								height={2778}
 								className="w-full"
@@ -103,7 +104,7 @@ export default function FeedCamPage() {
 						<div className="w-56 overflow-hidden rounded-3xl shadow-2xl">
 							<Image
 								src="/Apple iPhone 14 Plus (1284x2778)/Apple iPhone 14 Plus Screenshot 3.png"
-								alt="FeedCam - Settings and customization"
+								alt={s.screenshotAlt3}
 								width={1284}
 								height={2778}
 								className="w-full"
@@ -121,73 +122,24 @@ export default function FeedCamPage() {
 				<div className="mx-auto max-w-4xl">
 					<div className="reveal mb-16">
 						<p className="mb-4 text-sm font-medium tracking-widest uppercase text-muted">
-							Features
+							{s.featuresLabel}
 						</p>
 						<h2 className="text-3xl font-bold tracking-tight md:text-5xl">
-							Everything you need.
+							{s.featuresTitle1}
 							<br />
-							Nothing you don&rsquo;t.
+							{s.featuresTitle2}
 						</h2>
 					</div>
 
 					<div className="grid gap-12 md:grid-cols-2">
-						<div className="reveal">
-							<h3 className="mb-3 text-lg font-semibold">
-								Scrolling Teleprompter
-							</h3>
-							<p className="text-muted">
-								Smooth 60fps text scrolling right over your camera feed.
-								Adjust speed, font size, color, opacity, and position to
-								match your style.
-							</p>
-						</div>
-						<div className="reveal">
-							<h3 className="mb-3 text-lg font-semibold">
-								Script Management
-							</h3>
-							<p className="text-muted">
-								Create, edit, and organize your scripts. Quick access to
-								your entire library whenever you need it.
-							</p>
-						</div>
-						<div className="reveal">
-							<h3 className="mb-3 text-lg font-semibold">
-								AI Script Generation
-							</h3>
-							<p className="text-muted">
-								Stuck on what to say? Generate scripts from a topic with
-								AI. Choose your tone &mdash; casual, formal, energetic, or
-								educational.
-							</p>
-						</div>
-						<div className="reveal">
-							<h3 className="mb-3 text-lg font-semibold">
-								Photo to Text
-							</h3>
-							<p className="text-muted">
-								Snap a photo of printed text and extract it into a script
-								instantly using OCR. No retyping needed.
-							</p>
-						</div>
-						<div className="reveal">
-							<h3 className="mb-3 text-lg font-semibold">
-								Mirror Mode
-							</h3>
-							<p className="text-muted">
-								Flip text horizontally for use with physical teleprompter
-								mirror rigs. Works seamlessly with the overlay.
-							</p>
-						</div>
-						<div className="reveal">
-							<h3 className="mb-3 text-lg font-semibold">
-								Full Customization
-							</h3>
-							<p className="text-muted">
-								Text color, font size, scroll speed, opacity, and
-								positioning &mdash; all adjustable in real time so you can
-								dial in the perfect setup.
-							</p>
-						</div>
+						{s.features.map((feature, i) => (
+							<div key={i} className="reveal">
+								<h3 className="mb-3 text-lg font-semibold">
+									{feature.title}
+								</h3>
+								<p className="text-muted">{feature.desc}</p>
+							</div>
+						))}
 					</div>
 				</div>
 			</section>
@@ -197,58 +149,32 @@ export default function FeedCamPage() {
 				<div className="mx-auto max-w-2xl">
 					<div className="reveal mb-16">
 						<p className="mb-4 text-sm font-medium tracking-widest uppercase text-muted">
-							How it works
+							{s.howLabel}
 						</p>
 						<h2 className="text-3xl font-bold tracking-tight md:text-5xl">
-							Three steps.
+							{s.howTitle1}
 							<br />
-							That&rsquo;s it.
+							{s.howTitle2}
 						</h2>
 					</div>
 
 					<div className="space-y-12">
-						<div className="reveal flex items-start gap-6">
-							<span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-foreground text-sm font-bold text-background">
-								1
-							</span>
-							<div>
-								<h3 className="mb-1 text-lg font-semibold">
-									Write or paste your script
-								</h3>
-								<p className="text-muted">
-									Type it out, paste from anywhere, generate with AI, or
-									scan from a photo.
-								</p>
+						{s.steps.map((step, i) => (
+							<div
+								key={i}
+								className="reveal flex items-start gap-6"
+							>
+								<span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-foreground text-sm font-bold text-background">
+									{i + 1}
+								</span>
+								<div>
+									<h3 className="mb-1 text-lg font-semibold">
+										{step.title}
+									</h3>
+									<p className="text-muted">{step.desc}</p>
+								</div>
 							</div>
-						</div>
-						<div className="reveal flex items-start gap-6">
-							<span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-foreground text-sm font-bold text-background">
-								2
-							</span>
-							<div>
-								<h3 className="mb-1 text-lg font-semibold">
-									Hit record
-								</h3>
-								<p className="text-muted">
-									Your script scrolls over the front camera. Read
-									naturally while looking straight at the lens.
-								</p>
-							</div>
-						</div>
-						<div className="reveal flex items-start gap-6">
-							<span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-foreground text-sm font-bold text-background">
-								3
-							</span>
-							<div>
-								<h3 className="mb-1 text-lg font-semibold">
-									Save and share
-								</h3>
-								<p className="text-muted">
-									Preview your video, save to your camera roll, and post
-									to Reels, TikTok, YouTube, or wherever you share.
-								</p>
-							</div>
-						</div>
+						))}
 					</div>
 				</div>
 			</section>
@@ -258,19 +184,23 @@ export default function FeedCamPage() {
 				<div className="mx-auto max-w-4xl">
 					<div className="reveal mb-16 text-center">
 						<p className="mb-4 text-sm font-medium tracking-widest uppercase text-muted">
-							Pricing
+							{s.pricingLabel}
 						</p>
 						<h2 className="text-3xl font-bold tracking-tight md:text-5xl">
-							Start free.
+							{s.pricingTitle1}
 							<br />
-							Upgrade when you&rsquo;re ready.
+							{s.pricingTitle2}
 						</h2>
 					</div>
 
 					<div className="grid gap-6 md:grid-cols-3">
 						<div className="reveal rounded-2xl border border-border bg-background p-8">
-							<h3 className="mb-1 text-lg font-semibold">Free</h3>
-							<p className="mb-6 text-sm text-muted">Get started</p>
+							<h3 className="mb-1 text-lg font-semibold">
+								{s.free}
+							</h3>
+							<p className="mb-6 text-sm text-muted">
+								{s.freeTag}
+							</p>
 							<p className="mb-6 text-3xl font-bold">
 								$0
 								<span className="text-base font-normal text-muted">
@@ -278,34 +208,31 @@ export default function FeedCamPage() {
 								</span>
 							</p>
 							<ul className="space-y-3 text-sm text-muted">
-								<li className="flex items-start gap-2">
-									<span className="mt-0.5 text-foreground">&#10003;</span>
-									Up to 5 scripts
-								</li>
-								<li className="flex items-start gap-2">
-									<span className="mt-0.5 text-foreground">&#10003;</span>
-									3-minute recording limit
-								</li>
-								<li className="flex items-start gap-2">
-									<span className="mt-0.5 text-foreground">&#10003;</span>
-									Adjustable speed &amp; font size
-								</li>
-								<li className="flex items-start gap-2">
-									<span className="mt-0.5 text-foreground">&#10003;</span>
-									Save to camera roll
-								</li>
+								{s.freeFeatures.map((f, i) => (
+									<li
+										key={i}
+										className="flex items-start gap-2"
+									>
+										<span className="mt-0.5 text-foreground">
+											&#10003;
+										</span>
+										{f}
+									</li>
+								))}
 							</ul>
 						</div>
 
 						<div className="reveal rounded-2xl border-2 border-foreground bg-background p-8">
 							<div className="mb-1 flex items-center gap-2">
-								<h3 className="text-lg font-semibold">Pro</h3>
+								<h3 className="text-lg font-semibold">
+									{s.pro}
+								</h3>
 								<span className="rounded-full bg-foreground px-2 py-0.5 text-xs font-medium text-background">
-									Popular
+									{s.popular}
 								</span>
 							</div>
 							<p className="mb-6 text-sm text-muted">
-								For serious creators
+								{s.proTag}
 							</p>
 							<p className="mb-6 text-3xl font-bold">
 								$4.99
@@ -314,32 +241,27 @@ export default function FeedCamPage() {
 								</span>
 							</p>
 							<ul className="space-y-3 text-sm text-muted">
-								<li className="flex items-start gap-2">
-									<span className="mt-0.5 text-foreground">&#10003;</span>
-									Unlimited scripts
-								</li>
-								<li className="flex items-start gap-2">
-									<span className="mt-0.5 text-foreground">&#10003;</span>
-									10-minute recording limit
-								</li>
-								<li className="flex items-start gap-2">
-									<span className="mt-0.5 text-foreground">&#10003;</span>
-									No ads, no watermark
-								</li>
-								<li className="flex items-start gap-2">
-									<span className="mt-0.5 text-foreground">&#10003;</span>
-									Mirror mode
-								</li>
-								<li className="flex items-start gap-2">
-									<span className="mt-0.5 text-foreground">&#10003;</span>
-									Custom text colors
-								</li>
+								{s.proFeatures.map((f, i) => (
+									<li
+										key={i}
+										className="flex items-start gap-2"
+									>
+										<span className="mt-0.5 text-foreground">
+											&#10003;
+										</span>
+										{f}
+									</li>
+								))}
 							</ul>
 						</div>
 
 						<div className="reveal rounded-2xl border border-border bg-background p-8">
-							<h3 className="mb-1 text-lg font-semibold">Pro+</h3>
-							<p className="mb-6 text-sm text-muted">AI-powered</p>
+							<h3 className="mb-1 text-lg font-semibold">
+								{s.proPlus}
+							</h3>
+							<p className="mb-6 text-sm text-muted">
+								{s.proPlusTag}
+							</p>
 							<p className="mb-6 text-3xl font-bold">
 								$9.99
 								<span className="text-base font-normal text-muted">
@@ -347,22 +269,17 @@ export default function FeedCamPage() {
 								</span>
 							</p>
 							<ul className="space-y-3 text-sm text-muted">
-								<li className="flex items-start gap-2">
-									<span className="mt-0.5 text-foreground">&#10003;</span>
-									Everything in Pro
-								</li>
-								<li className="flex items-start gap-2">
-									<span className="mt-0.5 text-foreground">&#10003;</span>
-									AI script generation
-								</li>
-								<li className="flex items-start gap-2">
-									<span className="mt-0.5 text-foreground">&#10003;</span>
-									Photo to text (OCR)
-								</li>
-								<li className="flex items-start gap-2">
-									<span className="mt-0.5 text-foreground">&#10003;</span>
-									100 AI credits/month
-								</li>
+								{s.proPlusFeatures.map((f, i) => (
+									<li
+										key={i}
+										className="flex items-start gap-2"
+									>
+										<span className="mt-0.5 text-foreground">
+											&#10003;
+										</span>
+										{f}
+									</li>
+								))}
 							</ul>
 						</div>
 					</div>
@@ -374,31 +291,24 @@ export default function FeedCamPage() {
 				<div className="mx-auto max-w-2xl">
 					<div className="reveal mb-12">
 						<p className="mb-4 text-sm font-medium tracking-widest uppercase text-muted">
-							Built for
+							{s.builtForLabel}
 						</p>
 						<h2 className="text-3xl font-bold tracking-tight md:text-5xl">
-							Creators who talk
+							{s.builtForTitle1}
 							<br />
-							to the camera.
+							{s.builtForTitle2}
 						</h2>
 					</div>
 					<div className="reveal space-y-4 text-lg text-muted">
-						<div className="reveal-child flex items-start gap-3">
-							<span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-							YouTubers and vloggers
-						</div>
-						<div className="reveal-child flex items-start gap-3">
-							<span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-							Social media creators (Reels, TikTok, Shorts)
-						</div>
-						<div className="reveal-child flex items-start gap-3">
-							<span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-							Teachers and educators recording lessons
-						</div>
-						<div className="reveal-child flex items-start gap-3">
-							<span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-							Anyone who wants to sound prepared on camera
-						</div>
+						{s.builtForItems.map((item, i) => (
+							<div
+								key={i}
+								className="reveal-child flex items-start gap-3"
+							>
+								<span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+								{item}
+							</div>
+						))}
 					</div>
 				</div>
 			</section>
@@ -418,11 +328,9 @@ export default function FeedCamPage() {
 						/>
 					</div>
 					<h2 className="mb-4 text-3xl font-bold tracking-tight md:text-5xl">
-						Ready to record?
+						{s.ctaTitle}
 					</h2>
-					<p className="mb-10 text-lg text-muted">
-						Download FeedCam for free on iOS and Android.
-					</p>
+					<p className="mb-10 text-lg text-muted">{s.ctaDesc}</p>
 					<div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
 						<a
 							href="#"
@@ -437,10 +345,10 @@ export default function FeedCamPage() {
 							</svg>
 							<div className="text-left">
 								<div className="text-[10px] leading-none opacity-70">
-									Download on the
+									{s.appStoreLabel}
 								</div>
 								<div className="text-lg font-semibold leading-tight">
-									App Store
+									{s.appStore}
 								</div>
 							</div>
 						</a>
@@ -457,10 +365,10 @@ export default function FeedCamPage() {
 							</svg>
 							<div className="text-left">
 								<div className="text-[10px] leading-none opacity-70">
-									Get it on
+									{s.googlePlayLabel}
 								</div>
 								<div className="text-lg font-semibold leading-tight">
-									Google Play
+									{s.googlePlay}
 								</div>
 							</div>
 						</a>
@@ -471,7 +379,10 @@ export default function FeedCamPage() {
 			{/* Footer */}
 			<footer className="border-t border-border bg-foreground px-6 py-8 text-background">
 				<div className="reveal mx-auto flex max-w-4xl flex-col items-center gap-2 text-center">
-					<Link href="/" className="text-sm font-medium text-background/70 transition-colors hover:text-background">
+					<Link
+						href="/"
+						className="text-sm font-medium text-background/70 transition-colors hover:text-background"
+					>
 						GreyPants Studio
 					</Link>
 					<div className="flex gap-4">
@@ -482,14 +393,36 @@ export default function FeedCamPage() {
 							hello@greypants.studio
 						</a>
 						<span className="text-background/30">|</span>
+						<Link
+							href="/projects/feedcam/support"
+							className="text-sm text-background/50 transition-colors hover:text-background"
+						>
+							{s.support}
+						</Link>
+						<span className="text-background/30">|</span>
 						<a
 							href="https://rounded-hub-165.notion.site/FeedCam-Privacy-Policy-3164fe238ec3802ea083d536762ed7c4"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="text-sm text-background/50 transition-colors hover:text-background"
 						>
-							Privacy Policy
+							{s.privacyPolicy}
 						</a>
+					</div>
+					<div className="mt-2 flex gap-3">
+						<button
+							onClick={() => setLocale("en")}
+							className={`text-sm transition-colors ${locale === "en" ? "text-background font-medium" : "text-background/40 hover:text-background/70"}`}
+						>
+							English
+						</button>
+						<span className="text-background/30">|</span>
+						<button
+							onClick={() => setLocale("tr")}
+							className={`text-sm transition-colors ${locale === "tr" ? "text-background font-medium" : "text-background/40 hover:text-background/70"}`}
+						>
+							Türkçe
+						</button>
 					</div>
 					<p className="text-xs text-background/40">
 						&copy; {new Date().getFullYear()} GreyPants Studio

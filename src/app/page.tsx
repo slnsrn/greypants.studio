@@ -3,9 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useReveal } from "@/hooks/useReveal";
+import { useLocale } from "@/i18n/LocaleContext";
 
 export default function Home() {
 	useReveal();
+	const { locale, setLocale, t } = useLocale();
+	const s = t.home;
 
 	return (
 		<div className="grain noise relative min-h-screen">
@@ -26,24 +29,16 @@ export default function Home() {
 						priority
 					/>
 					<p className="fade-in fade-in-delay-1 mb-6 text-sm font-medium tracking-widest uppercase text-muted">
-						Small software. No drama.
+						{s.tagline}
 					</p>
 					<h1 className="fade-in fade-in-delay-2 mb-8 text-5xl font-bold leading-tight tracking-tight md:text-7xl">
-						We build simple tools
+						{s.heroTitle1}
 						<br />
-						that feel good.
+						{s.heroTitle2}
 					</h1>
 					<p className="fade-in fade-in-delay-3 animate-float mx-auto mb-12 max-w-md text-lg text-muted">
-						Independent product studio creating thoughtful, focused apps.
+						{s.heroSubtitle}
 					</p>
-					{/* <div className="fade-in fade-in-delay-4 flex flex-col items-center justify-center gap-4 sm:flex-row">
-						<a
-							href="#work"
-							className="animate-pulse-subtle inline-flex h-12 items-center rounded-full bg-foreground px-8 text-sm font-medium text-background transition-opacity hover:opacity-80"
-						>
-							View our work
-						</a>
-					</div> */}
 				</div>
 			</section>
 
@@ -51,28 +46,19 @@ export default function Home() {
 			<section className="border-t border-border bg-background px-6 py-32">
 				<div className="reveal mx-auto max-w-2xl">
 					<p className="mb-4 text-sm font-medium tracking-widest uppercase text-muted">
-						About
+						{s.aboutLabel}
 					</p>
 					<h2 className="mb-8 text-3xl font-bold tracking-tight md:text-5xl">
-						Three creatives.
+						{s.aboutTitle1}
 						<br />
-						Grey pants.
+						{s.aboutTitle2}
 						<br />
-						One idea.
+						{s.aboutTitle3}
 					</h2>
 					<div className="space-y-6 text-lg leading-relaxed text-muted">
-						<p>
-							GreyPants Studio started with an inside joke and a shared love for
-							building things.
-						</p>
-						<p>
-							What began as &ldquo;why are we all wearing grey pants?&rdquo;
-							turned into shipping real products.
-						</p>
-						<p>
-							We&rsquo;re an independent studio designing and developing small,
-							intentional digital tools.
-						</p>
+						<p>{s.aboutP1}</p>
+						<p>{s.aboutP2}</p>
+						<p>{s.aboutP3}</p>
 					</div>
 				</div>
 			</section>
@@ -82,65 +68,55 @@ export default function Home() {
 				<div className="mx-auto max-w-4xl">
 					<div className="reveal mb-16">
 						<p className="mb-4 text-sm font-medium tracking-widest uppercase text-muted">
-							What we build
+							{s.buildLabel}
 						</p>
 						<h2 className="text-3xl font-bold tracking-tight md:text-5xl">
-							Focused tools.
+							{s.buildTitle1}
 							<br />
-							Nothing more.
+							{s.buildTitle2}
 						</h2>
 					</div>
 
 					<div className="grid gap-16 md:grid-cols-2">
 						<div className="reveal">
-							<h3 className="mb-6 text-xl font-semibold">We create</h3>
+							<h3 className="mb-6 text-xl font-semibold">
+								{s.weCreate}
+							</h3>
 							<ul className="space-y-3 text-muted">
-								<li className="reveal-child flex items-start gap-3">
-									<span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-									Mobile applications
-								</li>
-								<li className="reveal-child flex items-start gap-3">
-									<span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-									Lightweight productivity tools
-								</li>
-								<li className="reveal-child flex items-start gap-3">
-									<span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-									Small experimental side projects
-								</li>
-								<li className="reveal-child flex items-start gap-3">
-									<span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-									Occasionally playful interactive ideas
-								</li>
+								{s.createItems.map((item, i) => (
+									<li
+										key={i}
+										className="reveal-child flex items-start gap-3"
+									>
+										<span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+										{item}
+									</li>
+								))}
 							</ul>
 						</div>
 
 						<div className="reveal">
-							<h3 className="mb-6 text-xl font-semibold">We care about</h3>
+							<h3 className="mb-6 text-xl font-semibold">
+								{s.weCare}
+							</h3>
 							<ul className="space-y-3 text-muted">
-								<li className="reveal-child flex items-start gap-3">
-									<span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-									Clean interfaces
-								</li>
-								<li className="reveal-child flex items-start gap-3">
-									<span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-									Calm design
-								</li>
-								<li className="reveal-child flex items-start gap-3">
-									<span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-									Focused features
-								</li>
-								<li className="reveal-child flex items-start gap-3">
-									<span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
-									Products that feel good to use
-								</li>
+								{s.careItems.map((item, i) => (
+									<li
+										key={i}
+										className="reveal-child flex items-start gap-3"
+									>
+										<span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-foreground" />
+										{item}
+									</li>
+								))}
 							</ul>
 						</div>
 					</div>
 
 					<div className="reveal mt-16 space-y-1 text-lg font-medium">
-						<p>No feature overload.</p>
-						<p>No corporate noise.</p>
-						<p className="text-muted">Just thoughtful software.</p>
+						<p>{s.buildFooter1}</p>
+						<p>{s.buildFooter2}</p>
+						<p className="text-muted">{s.buildFooter3}</p>
 					</div>
 				</div>
 			</section>
@@ -150,26 +126,24 @@ export default function Home() {
 				<div className="mx-auto max-w-2xl">
 					<div className="reveal">
 						<p className="mb-4 text-sm font-medium tracking-widest uppercase text-muted">
-							Our approach
+							{s.approachLabel}
 						</p>
 						<div className="mb-12 space-y-1 text-3xl font-bold leading-snug tracking-tight md:text-4xl">
-							<p className="reveal-child">Start small.</p>
-							<p className="reveal-child">Ship early.</p>
-							<p className="reveal-child">Improve constantly.</p>
+							<p className="reveal-child">{s.approach1}</p>
+							<p className="reveal-child">{s.approach2}</p>
+							<p className="reveal-child">{s.approach3}</p>
 						</div>
 					</div>
 
 					<div className="reveal space-y-6 text-lg leading-relaxed text-muted">
 						<div className="space-y-1">
-							<p className="reveal-child">Useful over noisy.</p>
-							<p className="reveal-child">Clarity over complexity.</p>
-							<p className="reveal-child">
-								Independence over scale-at-all-costs.
-							</p>
+							<p className="reveal-child">{s.philosophy1}</p>
+							<p className="reveal-child">{s.philosophy2}</p>
+							<p className="reveal-child">{s.philosophy3}</p>
 						</div>
 						<div className="space-y-1">
-							<p>We&rsquo;re not trying to build everything.</p>
-							<p>Just the right things.</p>
+							<p>{s.philosophy4}</p>
+							<p>{s.philosophy5}</p>
 						</div>
 					</div>
 				</div>
@@ -183,10 +157,10 @@ export default function Home() {
 				<div className="mx-auto max-w-4xl">
 					<div className="reveal mb-16">
 						<p className="mb-4 text-sm font-medium tracking-widest uppercase text-muted">
-							Our work
+							{s.workLabel}
 						</p>
 						<h2 className="text-3xl font-bold tracking-tight md:text-5xl">
-							Products
+							{s.workTitle}
 						</h2>
 					</div>
 
@@ -210,9 +184,7 @@ export default function Home() {
 									&rarr;
 								</span>
 							</h3>
-							<p className="text-muted">
-								A simple teleprompter experience built for clarity and flow.
-							</p>
+							<p className="text-muted">{s.feedcamDesc}</p>
 						</Link>
 
 						<a
@@ -222,7 +194,9 @@ export default function Home() {
 							className="reveal group rounded-2xl border border-border bg-background p-8 transition-all duration-300 hover:border-foreground/20 hover:shadow-sm"
 						>
 							<div className="mb-6 flex h-48 items-center justify-center rounded-xl bg-gradient-to-br from-amber-100 to-orange-200">
-								<span className="text-4xl font-bold text-orange-300">2048</span>
+								<span className="text-4xl font-bold text-orange-300">
+									2048
+								</span>
 							</div>
 							<h3 className="mb-2 text-xl font-semibold">
 								2048 Trouble
@@ -230,12 +204,9 @@ export default function Home() {
 									↗
 								</span>
 							</h3>
-							<p className="text-muted">
-								The classic 2048 puzzle with a twist — obstacle tiles that make
-								every move count.
-							</p>
+							<p className="text-muted">{s.troubleDesc}</p>
 							<p className="mt-2 text-xs text-muted/70">
-								Mobile app coming soon
+								{s.troubleSoon}
 							</p>
 						</a>
 					</div>
@@ -246,11 +217,9 @@ export default function Home() {
 			<section className="border-t border-border bg-background px-6 py-32 text-center">
 				<div className="reveal mx-auto max-w-xl">
 					<p className="text-2xl font-medium leading-relaxed md:text-3xl">
-						Built independently.
+						{s.closingTitle}
 						<br />
-						<span className="text-muted">
-							Somewhere between serious and playful.
-						</span>
+						<span className="text-muted">{s.closingSubtitle}</span>
 					</p>
 				</div>
 			</section>
@@ -279,6 +248,21 @@ export default function Home() {
 						>
 							greypants.studio
 						</a>
+					</div>
+					<div className="mt-2 flex gap-3">
+						<button
+							onClick={() => setLocale("en")}
+							className={`text-sm transition-colors ${locale === "en" ? "text-background font-medium" : "text-background/40 hover:text-background/70"}`}
+						>
+							English
+						</button>
+						<span className="text-background/30">|</span>
+						<button
+							onClick={() => setLocale("tr")}
+							className={`text-sm transition-colors ${locale === "tr" ? "text-background font-medium" : "text-background/40 hover:text-background/70"}`}
+						>
+							Türkçe
+						</button>
 					</div>
 					<p className="text-xs text-background/40">
 						&copy; {new Date().getFullYear()} GreyPants Studio

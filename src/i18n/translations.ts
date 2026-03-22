@@ -1,0 +1,408 @@
+export type Locale = "en" | "tr";
+
+export const translations = {
+	en: {
+		home: {
+			tagline: "Small software. No drama.",
+			heroTitle1: "We build simple tools",
+			heroTitle2: "that feel good.",
+			heroSubtitle:
+				"Independent product studio creating thoughtful, focused apps.",
+			aboutLabel: "About",
+			aboutTitle1: "Three creatives.",
+			aboutTitle2: "Grey pants.",
+			aboutTitle3: "One idea.",
+			aboutP1:
+				"GreyPants Studio started with an inside joke and a shared love for building things.",
+			aboutP2:
+				'What began as \u201cwhy are we all wearing grey pants?\u201d turned into shipping real products.',
+			aboutP3:
+				"We\u2019re an independent studio designing and developing small, intentional digital tools.",
+			buildLabel: "What we build",
+			buildTitle1: "Focused tools.",
+			buildTitle2: "Nothing more.",
+			weCreate: "We create",
+			createItems: [
+				"Mobile applications",
+				"Lightweight productivity tools",
+				"Small experimental side projects",
+				"Occasionally playful interactive ideas",
+			],
+			weCare: "We care about",
+			careItems: [
+				"Clean interfaces",
+				"Calm design",
+				"Focused features",
+				"Products that feel good to use",
+			],
+			buildFooter1: "No feature overload.",
+			buildFooter2: "No corporate noise.",
+			buildFooter3: "Just thoughtful software.",
+			approachLabel: "Our approach",
+			approach1: "Start small.",
+			approach2: "Ship early.",
+			approach3: "Improve constantly.",
+			philosophy1: "Useful over noisy.",
+			philosophy2: "Clarity over complexity.",
+			philosophy3: "Independence over scale-at-all-costs.",
+			philosophy4: "We\u2019re not trying to build everything.",
+			philosophy5: "Just the right things.",
+			workLabel: "Our work",
+			workTitle: "Products",
+			feedcamDesc:
+				"A simple teleprompter experience built for clarity and flow.",
+			troubleDesc:
+				"The classic 2048 puzzle with a twist \u2014 obstacle tiles that make every move count.",
+			troubleSoon: "Mobile app coming soon",
+			closingTitle: "Built independently.",
+			closingSubtitle: "Somewhere between serious and playful.",
+		},
+		feedcam: {
+			download: "Download",
+			heroTitle: "FeedCam",
+			heroTagline: "Teleprompter meets camera",
+			heroDesc:
+				"Read your script while recording. FeedCam overlays scrolling teleprompter text on your front camera so you never lose your train of thought.",
+			getApp: "Get the app",
+			seeFeatures: "See features",
+			screenshotsLabel: "See it in action",
+			screenshotsTitle: "Simple by design.",
+			screenshotAlt1: "FeedCam - Script library",
+			screenshotAlt2: "FeedCam - Recording with teleprompter",
+			screenshotAlt3: "FeedCam - Settings and customization",
+			featuresLabel: "Features",
+			featuresTitle1: "Everything you need.",
+			featuresTitle2: "Nothing you don\u2019t.",
+			features: [
+				{
+					title: "Scrolling Teleprompter",
+					desc: "Smooth 60fps text scrolling right over your camera feed. Adjust speed, font size, color, opacity, and position to match your style.",
+				},
+				{
+					title: "Script Management",
+					desc: "Create, edit, and organize your scripts. Quick access to your entire library whenever you need it.",
+				},
+				{
+					title: "AI Script Generation",
+					desc: "Stuck on what to say? Generate scripts from a topic with AI. Choose your tone \u2014 casual, formal, energetic, or educational.",
+				},
+				{
+					title: "Photo to Text",
+					desc: "Snap a photo of printed text and extract it into a script instantly using OCR. No retyping needed.",
+				},
+				{
+					title: "Mirror Mode",
+					desc: "Flip text horizontally for use with physical teleprompter mirror rigs. Works seamlessly with the overlay.",
+				},
+				{
+					title: "Full Customization",
+					desc: "Text color, font size, scroll speed, opacity, and positioning \u2014 all adjustable in real time so you can dial in the perfect setup.",
+				},
+			],
+			howLabel: "How it works",
+			howTitle1: "Three steps.",
+			howTitle2: "That\u2019s it.",
+			steps: [
+				{
+					title: "Write or paste your script",
+					desc: "Type it out, paste from anywhere, generate with AI, or scan from a photo.",
+				},
+				{
+					title: "Hit record",
+					desc: "Your script scrolls over the front camera. Read naturally while looking straight at the lens.",
+				},
+				{
+					title: "Save and share",
+					desc: "Preview your video, save to your camera roll, and post to Reels, TikTok, YouTube, or wherever you share.",
+				},
+			],
+			pricingLabel: "Pricing",
+			pricingTitle1: "Start free.",
+			pricingTitle2: "Upgrade when you\u2019re ready.",
+			free: "Free",
+			freeTag: "Get started",
+			freeFeatures: [
+				"Up to 5 scripts",
+				"3-minute recording limit",
+				"Adjustable speed & font size",
+				"Save to camera roll",
+			],
+			pro: "Pro",
+			proTag: "For serious creators",
+			popular: "Popular",
+			proFeatures: [
+				"Unlimited scripts",
+				"10-minute recording limit",
+				"No ads, no watermark",
+				"Mirror mode",
+				"Custom text colors",
+			],
+			proPlus: "Pro+",
+			proPlusTag: "AI-powered",
+			proPlusFeatures: [
+				"Everything in Pro",
+				"AI script generation",
+				"Photo to text (OCR)",
+				"100 AI credits/month",
+			],
+			builtForLabel: "Built for",
+			builtForTitle1: "Creators who talk",
+			builtForTitle2: "to the camera.",
+			builtForItems: [
+				"YouTubers and vloggers",
+				"Social media creators (Reels, TikTok, Shorts)",
+				"Teachers and educators recording lessons",
+				"Anyone who wants to sound prepared on camera",
+			],
+			ctaTitle: "Ready to record?",
+			ctaDesc: "Download FeedCam for free on iOS and Android.",
+			appStore: "App Store",
+			appStoreLabel: "Download on the",
+			googlePlay: "Google Play",
+			googlePlayLabel: "Get it on",
+			privacyPolicy: "Privacy Policy",
+			support: "Support",
+		},
+		support: {
+			back: "FeedCam",
+			title: "Support",
+			subtitle: "Need help with FeedCam? We\u2019re here for you.",
+			contactTitle: "Contact Us",
+			contactDesc:
+				"For any questions, issues, or feedback, reach out to us at:",
+			responseTime: "We typically respond within 24 hours.",
+			faqTitle: "Frequently Asked Questions",
+			faqs: [
+				{
+					q: "How do I adjust the teleprompter speed?",
+					a: "On the recording screen, use the speed slider to control how fast the text scrolls. You can adjust it before or during recording.",
+				},
+				{
+					q: "Can I use FeedCam without a subscription?",
+					a: "Yes! The free plan includes up to 5 scripts and 3-minute recordings. Upgrade to Pro or Pro+ for unlimited scripts, longer recordings, and more features.",
+				},
+				{
+					q: "How do I cancel my subscription?",
+					a: "Subscriptions are managed through the App Store. Go to Settings > Apple ID > Subscriptions on your device and select FeedCam to cancel or modify your plan.",
+				},
+				{
+					q: "How do I restore my purchase on a new device?",
+					a: 'Open FeedCam, go to Settings, and tap "Restore Purchases." Make sure you\u2019re signed in with the same Apple ID you used for the original purchase.',
+				},
+				{
+					q: "Where are my recordings saved?",
+					a: "Recordings are saved directly to your device\u2019s camera roll. Make sure FeedCam has permission to access your photo library.",
+				},
+				{
+					q: "What does AI script generation do?",
+					a: "With Pro+, you can enter a topic and choose a tone (casual, formal, energetic, or educational) to generate a ready-to-use script powered by AI.",
+				},
+			],
+			privacyPolicy: "Privacy Policy",
+		},
+	},
+	tr: {
+		home: {
+			tagline: "Basit yaz\u0131l\u0131m. Drama yok.",
+			heroTitle1: "Kullan\u0131m\u0131 keyifli",
+			heroTitle2: "ara\u00e7lar yap\u0131yoruz.",
+			heroSubtitle:
+				"D\u00fc\u015f\u00fcnceli, odakl\u0131 uygulamalar \u00fcreten ba\u011f\u0131ms\u0131z yaz\u0131l\u0131m st\u00fcdyosu.",
+			aboutLabel: "Hakk\u0131m\u0131zda",
+			aboutTitle1: "\u00dc\u00e7 yarat\u0131c\u0131.",
+			aboutTitle2: "Gri pantolonlar.",
+			aboutTitle3: "Tek bir fikir.",
+			aboutP1:
+				"GreyPants Studio, i\u00e7 \u015fakalarla ve bir \u015feyler yaratma tutkusuyla ba\u015flad\u0131.",
+			aboutP2:
+				'\u201cNeden hepimiz gri pantolon giyiyoruz?\u201d sorusu, ger\u00e7ek \u00fcr\u00fcnler \u00e7\u0131karmaya d\u00f6n\u00fc\u015ft\u00fc.',
+			aboutP3:
+				"K\u00fc\u00e7\u00fck, amac\u0131na uygun dijital ara\u00e7lar tasarlayan ve geli\u015ftiren ba\u011f\u0131ms\u0131z bir st\u00fcdyoyuz.",
+			buildLabel: "Ne yap\u0131yoruz",
+			buildTitle1: "Odakl\u0131 ara\u00e7lar.",
+			buildTitle2: "Fazlas\u0131 de\u011fil.",
+			weCreate: "Yapt\u0131klar\u0131m\u0131z",
+			createItems: [
+				"Mobil uygulamalar",
+				"Hafif verimlilik ara\u00e7lar\u0131",
+				"K\u00fc\u00e7\u00fck deneysel yan projeler",
+				"Ara s\u0131ra e\u011flenceli interaktif fikirler",
+			],
+			weCare: "\u00d6nem verdiklerimiz",
+			careItems: [
+				"Temiz aray\u00fczler",
+				"Sakin tasar\u0131m",
+				"Odakl\u0131 \u00f6zellikler",
+				"Kullan\u0131m\u0131 keyifli \u00fcr\u00fcnler",
+			],
+			buildFooter1: "\u00d6zellik kalabal\u0131\u011f\u0131 yok.",
+			buildFooter2: "Kurumsal g\u00fcr\u00fclt\u00fc yok.",
+			buildFooter3: "Sadece \u00f6zenli yaz\u0131l\u0131m.",
+			approachLabel: "Yakla\u015f\u0131m\u0131m\u0131z",
+			approach1: "K\u00fc\u00e7\u00fck ba\u015fla.",
+			approach2: "Erken yay\u0131nla.",
+			approach3: "S\u00fcrekli geli\u015ftir.",
+			philosophy1: "G\u00fcr\u00fclt\u00fcl\u00fc de\u011fil, faydal\u0131.",
+			philosophy2: "Karma\u015f\u0131k de\u011fil, a\u00e7\u0131k.",
+			philosophy3: "Her ne pahas\u0131na b\u00fcy\u00fcme de\u011fil, ba\u011f\u0131ms\u0131zl\u0131k.",
+			philosophy4: "Her \u015feyi yapmaya \u00e7al\u0131\u015fm\u0131yoruz.",
+			philosophy5: "Sadece do\u011fru \u015feyleri.",
+			workLabel: "\u00c7al\u0131\u015fmalar\u0131m\u0131z",
+			workTitle: "\u00dcr\u00fcnler",
+			feedcamDesc:
+				"Ak\u0131c\u0131l\u0131k ve netlik i\u00e7in tasarlanm\u0131\u015f basit bir prompter deneyimi.",
+			troubleDesc:
+				"Klasik 2048 bulmacas\u0131na bir b\u00fck\u00fcm \u2014 her hamleyi \u00f6nemli k\u0131lan engel karolar\u0131.",
+			troubleSoon: "Mobil uygulama \u00e7ok yak\u0131nda",
+			closingTitle: "Ba\u011f\u0131ms\u0131z \u00fcretildi.",
+			closingSubtitle: "Ciddi ile e\u011flenceli aras\u0131nda bir yerde.",
+		},
+		feedcam: {
+			download: "\u0130ndir",
+			heroTitle: "FeedCam",
+			heroTagline: "Prompter kamerayla bulu\u015fuyor",
+			heroDesc:
+				"Kay\u0131t yaparken metninizi okuyun. FeedCam, kayan prompter metnini \u00f6n kamaran\u0131za bindirerek d\u00fc\u015f\u00fcnce ak\u0131\u015f\u0131n\u0131z\u0131 hi\u00e7 kaybetmemenizi sa\u011flar.",
+			getApp: "Uygulamay\u0131 indir",
+			seeFeatures: "\u00d6zellikleri g\u00f6r",
+			screenshotsLabel: "\u0130\u015fte b\u00f6yle \u00e7al\u0131\u015f\u0131yor",
+			screenshotsTitle: "Tasar\u0131m\u0131yla basit.",
+			screenshotAlt1: "FeedCam - Metin k\u00fct\u00fcphanesi",
+			screenshotAlt2: "FeedCam - Prompter ile kay\u0131t",
+			screenshotAlt3: "FeedCam - Ayarlar ve \u00f6zelle\u015ftirme",
+			featuresLabel: "\u00d6zellikler",
+			featuresTitle1: "\u0130htiyac\u0131n\u0131z olan her \u015fey.",
+			featuresTitle2: "Fazlas\u0131 de\u011fil.",
+			features: [
+				{
+					title: "Kayan Prompter",
+					desc: "Kamera g\u00f6r\u00fcnt\u00fcn\u00fcz\u00fcn \u00fczerinde ak\u0131c\u0131 60fps metin kayd\u0131rma. H\u0131z, yaz\u0131 tipi boyutu, renk, opakl\u0131k ve konumu tarz\u0131n\u0131za g\u00f6re ayarlay\u0131n.",
+				},
+				{
+					title: "Metin Y\u00f6netimi",
+					desc: "Metinlerinizi olu\u015fturun, d\u00fczenleyin ve organize edin. T\u00fcm k\u00fct\u00fcphanenize ihtiyac\u0131n\u0131z oldu\u011funda h\u0131zl\u0131 eri\u015fim.",
+				},
+				{
+					title: "Yapay Zeka ile Metin Olu\u015fturma",
+					desc: "Ne s\u00f6yleyece\u011finize tak\u0131ld\u0131n\u0131z m\u0131? Yapay zeka ile bir konudan metin olu\u015fturun. Tonunuzu se\u00e7in \u2014 samimi, resmi, enerjik veya e\u011fitici.",
+				},
+				{
+					title: "Foto\u011fraftan Metin",
+					desc: "Bas\u0131l\u0131 metnin foto\u011fraf\u0131n\u0131 \u00e7ekin ve OCR kullanarak an\u0131nda bir metne d\u00f6n\u00fc\u015ft\u00fcr\u00fcn. Yeniden yazmaya gerek yok.",
+				},
+				{
+					title: "Ayna Modu",
+					desc: "Fiziksel prompter ayna d\u00fczene\u011finde kullanmak i\u00e7in metni yatay olarak \u00e7evirin. Bindirme ile sorunsuz \u00e7al\u0131\u015f\u0131r.",
+				},
+				{
+					title: "Tam \u00d6zelle\u015ftirme",
+					desc: "Metin rengi, yaz\u0131 tipi boyutu, kayd\u0131rma h\u0131z\u0131, opakl\u0131k ve konumland\u0131rma \u2014 hepsi ger\u00e7ek zamanl\u0131 ayarlanabilir.",
+				},
+			],
+			howLabel: "Nas\u0131l \u00e7al\u0131\u015f\u0131r",
+			howTitle1: "\u00dc\u00e7 ad\u0131m.",
+			howTitle2: "Hepsi bu.",
+			steps: [
+				{
+					title: "Metninizi yaz\u0131n veya yap\u0131\u015ft\u0131r\u0131n",
+					desc: "Yaz\u0131n, herhangi bir yerden yap\u0131\u015ft\u0131r\u0131n, yapay zeka ile olu\u015fturun veya foto\u011fraftan taray\u0131n.",
+				},
+				{
+					title: "Kayda bas\u0131n",
+					desc: "Metniniz \u00f6n kameran\u0131n \u00fczerinde kayar. Objektife do\u011frudan bakarken do\u011fal bir \u015fekilde okuyun.",
+				},
+				{
+					title: "Kaydedin ve payla\u015f\u0131n",
+					desc: "Videonuzun \u00f6nizlemesini yap\u0131n, film rulonuza kaydedin ve Reels, TikTok, YouTube veya payla\u015ft\u0131\u011f\u0131n\u0131z her yere g\u00f6nderin.",
+				},
+			],
+			pricingLabel: "Fiyatland\u0131rma",
+			pricingTitle1: "\u00dccretsiz ba\u015flay\u0131n.",
+			pricingTitle2: "Haz\u0131r oldu\u011funuzda y\u00fckselin.",
+			free: "\u00dccretsiz",
+			freeTag: "Ba\u015flay\u0131n",
+			freeFeatures: [
+				"5 metne kadar",
+				"3 dakika kay\u0131t s\u0131n\u0131r\u0131",
+				"Ayarlanabilir h\u0131z ve yaz\u0131 tipi boyutu",
+				"Film rulonuza kaydedin",
+			],
+			pro: "Pro",
+			proTag: "Ciddi i\u00e7erik \u00fcreticileri i\u00e7in",
+			popular: "Pop\u00fcler",
+			proFeatures: [
+				"S\u0131n\u0131rs\u0131z metin",
+				"10 dakika kay\u0131t s\u0131n\u0131r\u0131",
+				"Reklams\u0131z, filigrans\u0131z",
+				"Ayna modu",
+				"\u00d6zel metin renkleri",
+			],
+			proPlus: "Pro+",
+			proPlusTag: "Yapay zeka destekli",
+			proPlusFeatures: [
+				"Pro\u2019daki her \u015fey",
+				"Yapay zeka ile metin olu\u015fturma",
+				"Foto\u011fraftan metin (OCR)",
+				"Ayl\u0131k 100 yapay zeka kredisi",
+			],
+			builtForLabel: "Kime g\u00f6re",
+			builtForTitle1: "Kameraya konu\u015fan",
+			builtForTitle2: "i\u00e7erik \u00fcreticileri i\u00e7in.",
+			builtForItems: [
+				"YouTuber\u2019lar ve vlogger\u2019lar",
+				"Sosyal medya i\u00e7erik \u00fcreticileri (Reels, TikTok, Shorts)",
+				"Ders kaydeden \u00f6\u011fretmenler ve e\u011fitimciler",
+				"Kamera kar\u015f\u0131s\u0131nda haz\u0131rl\u0131kl\u0131 g\u00f6r\u00fcnmek isteyen herkes",
+			],
+			ctaTitle: "Kayda haz\u0131r m\u0131s\u0131n\u0131z?",
+			ctaDesc:
+				"FeedCam\u2019i iOS ve Android\u2019de \u00fccretsiz indirin.",
+			appStore: "App Store",
+			appStoreLabel: "\u015eu platformda indirin:",
+			googlePlay: "Google Play",
+			googlePlayLabel: "\u015eu platformda edinin:",
+			privacyPolicy: "Gizlilik Politikas\u0131",
+			support: "Destek",
+		},
+		support: {
+			back: "FeedCam",
+			title: "Destek",
+			subtitle:
+				"FeedCam ile ilgili yard\u0131ma m\u0131 ihtiyac\u0131n\u0131z var? Burada yard\u0131mc\u0131 olmak i\u00e7in var\u0131z.",
+			contactTitle: "Bize Ula\u015f\u0131n",
+			contactDesc:
+				"Sorular\u0131n\u0131z, sorunlar\u0131n\u0131z veya geri bildirimleriniz i\u00e7in bize ula\u015f\u0131n:",
+			responseTime: "Genellikle 24 saat i\u00e7inde yan\u0131t veriyoruz.",
+			faqTitle: "S\u0131k\u00e7a Sorulan Sorular",
+			faqs: [
+				{
+					q: "Prompter h\u0131z\u0131n\u0131 nas\u0131l ayarlar\u0131m?",
+					a: "Kay\u0131t ekran\u0131nda, metnin ne kadar h\u0131zl\u0131 kayaca\u011f\u0131n\u0131 kontrol etmek i\u00e7in h\u0131z kayd\u0131r\u0131c\u0131s\u0131n\u0131 kullan\u0131n. Kay\u0131t \u00f6ncesinde veya s\u0131ras\u0131nda ayarlayabilirsiniz.",
+				},
+				{
+					q: "FeedCam\u2019i abonelik olmadan kullanabilir miyim?",
+					a: "Evet! \u00dccretsiz plan 5 metne kadar ve 3 dakikal\u0131k kay\u0131tlar i\u00e7erir. S\u0131n\u0131rs\u0131z metin, daha uzun kay\u0131tlar ve daha fazla \u00f6zellik i\u00e7in Pro veya Pro+ aboneli\u011fine ge\u00e7in.",
+				},
+				{
+					q: "Aboneli\u011fimi nas\u0131l iptal ederim?",
+					a: "Abonelikler App Store \u00fczerinden y\u00f6netilir. Cihaz\u0131n\u0131zda Ayarlar > Apple Kimli\u011fi > Abonelikler yolunu izleyin ve plan\u0131n\u0131z\u0131 iptal etmek veya de\u011fi\u015ftirmek i\u00e7in FeedCam\u2019i se\u00e7in.",
+				},
+				{
+					q: "Yeni bir cihazda sat\u0131n al\u0131m\u0131m\u0131 nas\u0131l geri y\u00fcklerim?",
+					a: 'FeedCam\u2019i a\u00e7\u0131n, Ayarlar\u2019a gidin ve "Sat\u0131n Al\u0131mlar\u0131 Geri Y\u00fckle" se\u00e7ene\u011fine dokunun. Orijinal sat\u0131n alma i\u00e7in kulland\u0131\u011f\u0131n\u0131z Apple Kimli\u011fi ile giri\u015f yapt\u0131\u011f\u0131n\u0131zdan emin olun.',
+				},
+				{
+					q: "Kay\u0131tlar\u0131m nereye kaydediliyor?",
+					a: "Kay\u0131tlar do\u011frudan cihaz\u0131n\u0131z\u0131n foto\u011fraf kitapl\u0131\u011f\u0131na kaydedilir. FeedCam\u2019in foto\u011fraf kitapl\u0131\u011f\u0131n\u0131za eri\u015fim izni oldu\u011fundan emin olun.",
+				},
+				{
+					q: "Yapay zeka metin olu\u015fturma ne i\u015fe yarar?",
+					a: "Pro+ ile bir konu girip ton se\u00e7ebilirsiniz (samimi, resmi, enerjik veya e\u011fitici) ve yapay zeka destekli kullan\u0131ma haz\u0131r bir metin olu\u015fturabilirsiniz.",
+				},
+			],
+			privacyPolicy: "Gizlilik Politikas\u0131",
+		},
+	},
+} as const;
+
+export type Translations = (typeof translations)["en"];
