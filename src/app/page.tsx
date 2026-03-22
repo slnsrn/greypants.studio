@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useReveal } from "@/hooks/useReveal";
 
 export default function Home() {
@@ -190,15 +191,29 @@ export default function Home() {
 					</div>
 
 					<div className="grid gap-8 md:grid-cols-2">
-						<div className="reveal group rounded-2xl border border-border bg-background p-8 transition-all duration-300 hover:border-foreground/20 hover:shadow-sm">
+						<Link
+							href="/projects/feedcam"
+							className="reveal group rounded-2xl border border-border bg-background p-8 transition-all duration-300 hover:border-foreground/20 hover:shadow-sm"
+						>
 							<div className="mb-6 flex h-48 items-center justify-center rounded-xl bg-gradient-to-br from-neutral-200 to-neutral-300">
-								<span className="text-4xl font-bold text-neutral-400">FC</span>
+								<Image
+									src="/AppIcon.appiconset/icon-ios-1024x1024.png"
+									alt="FeedCam"
+									width={128}
+									height={128}
+									className="rounded-3xl"
+								/>
 							</div>
-							<h3 className="mb-2 text-xl font-semibold">FeedCam</h3>
+							<h3 className="mb-2 text-xl font-semibold">
+								FeedCam
+								<span className="ml-2 inline-block text-sm font-normal text-muted transition-transform group-hover:translate-x-1">
+									&rarr;
+								</span>
+							</h3>
 							<p className="text-muted">
 								A simple teleprompter experience built for clarity and flow.
 							</p>
-						</div>
+						</Link>
 
 						<a
 							href="https://2048trouble.com/"
