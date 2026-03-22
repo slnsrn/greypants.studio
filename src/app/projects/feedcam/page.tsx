@@ -474,12 +474,23 @@ export default function FeedCamPage() {
 					<Link href="/" className="text-sm font-medium text-background/70 transition-colors hover:text-background">
 						GreyPants Studio
 					</Link>
-					<a
-						href="mailto:hello@greypants.studio"
-						className="text-sm text-background/50 transition-colors hover:text-background"
-					>
-						hello@greypants.studio
-					</a>
+					<div className="flex gap-4">
+						<a
+							href="mailto:hello@greypants.studio"
+							className="text-sm text-background/50 transition-colors hover:text-background"
+						>
+							hello@greypants.studio
+						</a>
+						<span className="text-background/30">|</span>
+						<a
+							href="https://rounded-hub-165.notion.site/FeedCam-Privacy-Policy-3164fe238ec3802ea083d536762ed7c4"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-sm text-background/50 transition-colors hover:text-background"
+						>
+							Privacy Policy
+						</a>
+					</div>
 					<p className="text-xs text-background/40">
 						&copy; {new Date().getFullYear()} GreyPants Studio
 					</p>
