@@ -197,6 +197,10 @@ export const translations = {
 					q: "What does AI script generation do?",
 					a: "With Pro+, you can enter a topic and choose a tone (casual, formal, energetic, or educational) to generate a ready-to-use script powered by AI.",
 				},
+				{
+					q: "How do I request my data to be deleted?",
+					a: "To request deletion of your subscription data and account information, email us at hello@greypants.studio with the subject line \u201cData deletion request\u201d. We process requests within 14 days. Recordings and scripts are stored only on your device and are removed when you uninstall the app.",
+				},
 			],
 			privacyPolicy: "Privacy Policy",
 		},
@@ -398,6 +402,10 @@ export const translations = {
 				{
 					q: "Yapay zeka metin olu\u015fturma ne i\u015fe yarar?",
 					a: "Pro+ ile bir konu girip ton se\u00e7ebilirsiniz (samimi, resmi, enerjik veya e\u011fitici) ve yapay zeka destekli kullan\u0131ma haz\u0131r bir metin olu\u015fturabilirsiniz.",
+				},
+				{
+					q: "Verilerimin silinmesini nas\u0131l talep ederim?",
+					a: "Abonelik verilerinizin ve hesap bilgilerinizin silinmesini talep etmek i\u00e7in \u201cVeri silme talebi\u201d konusuyla hello@greypants.studio adresine e-posta g\u00f6nderin. Taleplerinizi 14 g\u00fcn i\u00e7inde i\u015fleme al\u0131yoruz. Kay\u0131tlar ve metinler yaln\u0131zca cihaz\u0131n\u0131zda saklan\u0131r ve uygulamay\u0131 kald\u0131rd\u0131\u011f\u0131n\u0131zda silinir.",
 				},
 			],
 			privacyPolicy: "Gizlilik Politikas\u0131",
